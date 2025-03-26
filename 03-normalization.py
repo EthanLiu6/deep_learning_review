@@ -8,6 +8,7 @@ if __name__ == '__main__':
 
     print(tsr2.shape)
     m = nn.BatchNorm1d(2)
+    # m.train()
     # m = nn.LayerNorm(2)
     print(m.weight)
     print(m.bias)

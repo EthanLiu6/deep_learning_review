@@ -1,29 +1,30 @@
 """
-single head attention
+single head attention: scale-dot-product-Attention
 """
+from math import sqrt
 import torch
 import torch.nn as nn
 from torch import Tensor
 import torch.nn.functional as F
 
 
-class SingleHeadAttention(nn.Module):
+class ScaleDotProductAttention(nn.Module):
     def __init__(self, embedding_dim, *args):
 
-        super(SingleHeadAttention, self).__init__()
+        super(ScaleDotProductAttention, self).__init__()
         self.embedding_dim = embedding_dim
         self.qkv = nn.Linear(self.embedding_dim, self.embedding_dim * 3)
 
     def forward(self, X):  # please insure your input shape like:
         # [batch_size, seq_len, embedding_dim]
-        # 1. q,k,v   2.q @ k^t   3.mask(ignore)   4.softmax scale   5.attention res
+        # 1. q,k,v   2.q @ k^t / d_k   3.mask(ignore)   4.softmax scale   5.attention res
         qkv: Tensor = self.qkv(X)
         query, key, value = torch.split(qkv, [self.embedding_dim, self.embedding_dim, self.embedding_dim], dim=-1)
         # print(query.shape)
         # print(key.shape)
         # print(value.shape)
 
-        attention_scores = torch.matmul(query, key.transpose(-2, -1))
+        attention_scores = torch.matmul(query, key.transpose(-2, -1)) / sqrt(key.shape[-1])
         scores = F.softmax(attention_scores, dim=-1)
 
         # if mask is not None:
@@ -37,8 +38,8 @@ class SingleHeadAttention(nn.Module):
 
 
 if __name__ == '__main__':
-    ipt = torch.randn(2, 3, 64)
-    model = SingleHeadAttention(ipt.shape[-1])
+    ipt = torch.randn(2, 16, 64)
+    model = ScaleDotProductAttention(ipt.shape[-1])
     attention, scores = model(ipt)
 
     print(model)

@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 
-
 if __name__ == '__main__':
     tsr1 = torch.tensor([2, 4, 5])
     tsr2 = torch.tensor([[[2, 4, 5],

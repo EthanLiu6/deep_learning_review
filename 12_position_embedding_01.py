@@ -23,7 +23,7 @@ def position_embedding(ipt):
             for i in range(d):
                 # print("i:", i)
                 if (i & 1) == 1:  # 奇
-                    p_k_i = math.cos(k / (10000 ** (i / d)))
+                    p_k_i = math.cos(k / (10000 ** ((i-1) / d)))
                 else:
                     p_k_i = math.sin(k / (10000 ** (i / d)))
                 position[batch_n][k][i] = p_k_i

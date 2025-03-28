@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13530f50-8692-4ce6-9e4b-1955627cc9ed" name="Changes" comment="new: position embedding 01">
-      <change afterPath="$PROJECT_DIR$/14_multi_head_attention.py" afterDir="false" />
+    <list default="true" id="13530f50-8692-4ce6-9e4b-1955627cc9ed" name="Changes" comment="new: attention and other">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-normalization.py" beforeDir="false" afterPath="$PROJECT_DIR$/03-normalization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/11_single_head_attention.py" beforeDir="false" afterPath="$PROJECT_DIR$/11_scale_dot_product_attention.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/12_position_embedding_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/12_position_embedding_01.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +55,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.14_multi_head_attention">
+  <component name="RunManager" selected="Python.12_position_embedding_01">
     <configuration name="10_padding_mask" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="deepl_learning_review" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -170,9 +168,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.12_position_embedding_01" />
         <item itemvalue="Python.14_multi_head_attention" />
         <item itemvalue="Python.11_scale_dot_product_attention" />
-        <item itemvalue="Python.12_position_embedding_01" />
         <item itemvalue="Python.13_position_emb_by_tenser_01" />
         <item itemvalue="Python.10_padding_mask" />
       </list>
@@ -193,7 +191,9 @@
       <workItem from="1742883528035" duration="14429000" />
       <workItem from="1742913409231" duration="2530000" />
       <workItem from="1742957545944" duration="7898000" />
-      <workItem from="1742998872030" duration="4645000" />
+      <workItem from="1742998872030" duration="5286000" />
+      <workItem from="1743129658445" duration="496000" />
+      <workItem from="1743142174121" duration="688000" />
     </task>
     <task id="LOCAL-00001" summary="docs: add">
       <created>1742910690936</created>
@@ -265,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1742984096542</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="new: attention and other">
+      <created>1743007952856</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1743007952856</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +324,8 @@
     <MESSAGE value="Delete .idea directory" />
     <MESSAGE value="update: code 11" />
     <MESSAGE value="new: position embedding 01" />
-    <option name="LAST_COMMIT_MESSAGE" value="new: position embedding 01" />
+    <MESSAGE value="new: attention and other" />
+    <option name="LAST_COMMIT_MESSAGE" value="new: attention and other" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -338,7 +346,7 @@
     <SUITE FILE_PATH="coverage/deepl_learning_review$05_transformer.coverage" NAME="05-transformer Coverage Results" MODIFIED="1742354275621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/deepl_learning_review$12_position_emb_by_tenser_01.coverage" NAME="13_position_emb_by_tenser_01 Coverage Results" MODIFIED="1742979292801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/deepl_learning_review$06_transformer_by_HF.coverage" NAME="06-transformer_by_HF Coverage Results" MODIFIED="1742356970159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/deepl_learning_review$12_position_embedding_01.coverage" NAME="12_position_embedding_01 Coverage Results" MODIFIED="1742980127943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/deepl_learning_review$11_single_head_attention.coverage" NAME="11_scale_dot_product_attention Coverage Results" MODIFIED="1743005793992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/deepl_learning_review$12_position_embedding_01.coverage" NAME="12_position_embedding_01 Coverage Results" MODIFIED="1743142247461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
